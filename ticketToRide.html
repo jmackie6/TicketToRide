@@ -1,0 +1,3518 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ticket To Ride</title>
+  <link href="ticketToRide.css" rel="stylesheet" />
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="ticketToRide.js"></script>
+  
+</head>
+<body>
+<div class="title" style = "background-color: #93A29B; border: 5px solid; text-align: center; margin: auto; font-color: #ffffff;">
+          
+            <p style=" font-size: 50px; font-color: #ffffff;">
+               <img src="goodTitle.jpg" alt="title" style="width:850px;height:150px;"></p>
+  <h1 style="font-color: #ffffff; ">Welcome to the TICKET to RIDE counter</h1>
+  <h2 > This is the Ticket to Ride board game counter which will help you count up the score for each player at the end of the game.</h2>
+  
+  <div class="game-div" style = "background-color: #8B635C; border: 3px solid; text-align: center; margin: auto ">
+           
+            <p style=" font-size: 20px; font-color: #ffffff;">
+               <b>Number of Players</b> 
+              <select name="numPlayers" id="numPlayers">
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select></p>
+     
+     
+                <button name="submit" id="submit" type="submit" onclick="players()" >Save and Continue</button>
+    <br><br>
+   </div><br>
+   </div>
+   <br><br>
+  
+  
+  <div name="background" id="background" class="background-div" style = "background-color:#DDD78D ; margin: auto;border: 4px solid; text-align: center; display:none; "><br>
+  <div name="play1" id="play1" class="player-div" style = "background-color: #7C776D; margin: auto; border: 2px solid; text-align: center;display:none;">
+          
+    
+    <table style="width:100%">
+ <tr>
+ <th><p style=" font-size: 20px; font-color: #ffffff;">
+               <b>Player Name: </b><input type="text" name="player1" id="player1" 
+                            ></th>
+ <th></th>
+ </tr>
+    </table>
+            <p style=" font-size: 16px; font-color: #ffffff;">
+              Input the number of times you laid down the specific number of tracks(Example: I laid down 1 train consisting of 5 tracks, meaning in the select box next to 5 I will select 1)</p>EXAMPLE: 5 Track <br><img src="fiveTrack.jpg" alt="title" style="width:300px;height:60px;"><br>
+ 1  <select name="1track1" id="1track1" >
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+2 <select name="2track1" id="2track1">
+  <option value="0">0</option>  
+  <option value="2">1</option>
+  <option value="4">2</option>
+  <option value="6">3</option>
+  <option value="8">4</option>
+  <option value="10">5</option>
+  <option value="12">6</option>
+  <option value="14">7</option>
+  <option value="16">8</option>
+  <option value="18">9</option>
+  <option value="20">10</option>
+  <option value="22">11</option>
+  <option value="24">12</option>
+</select>
+3 <select name="3track1" id="3track1">
+  <option value="0">0</option>
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>
+4 <select name="4track1" id="4track1">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+5 <select name="5track1" id="5track1">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+6 <select name="6track1" id="6track1">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+    7 <select name="7track1" id="7track1">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+    8 <select name="8track1" id="8track1">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select><br><br>
+    
+    
+    
+                EXAMPLE: Mission card with value<br><img src="missionValue.jpg" alt="title" style="width:200px;height:100px;"><br>
+    <br>Number of Mission Cards Obtained:  <select name="missions1" id="missions1" onchange="player1Missions()">
+  <option value="0">0</option>
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+</select><br><br>
+      
+    
+    
+    <div style="display:none;" name="secondPart1" id="secondPart1">
+
+    <div  style="display:none;" name="mission1Play1" id="mission1Play1"> 
+    
+    <div  class="mission-div" name="1mission1" id="1mission1" >Mission 1 Point Value: </div>
+    <select  class="mission-div" name="1mission1Value" id="1mission1Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="1complete1" id="1complete1"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check1" name="1check1" /><br>
+      </div>
+      <div  style="display:none;" name="mission2Play1" id="mission2Play1">
+
+    <div  class="mission-div" name = "mission2" id="mission2" >Mission 2 Point Value: </div>
+    <select  class="mission-div" name="1mission2Value" id="1mission2Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="1complete2" id="1complete2"> Completed </div>
+      <input  class="mission-div3" type="checkbox" id="1check2" name="1check2" value=""/><br>
+      </div>
+        <div  style="display:none;" name="mission3Play1" id="mission3Play1">
+          
+      <div  class="mission-div" name = "mission3" id="mission3" >Mission 3 Point Value: </div>
+    <select  class="mission-div" name="1mission3Value" id="1mission3Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete3" id="complete3"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check3" name="1check3" value=""/><br>
+      </div>
+      <div  style="display:none;" name="mission4Play1" id="mission4Play1">
+        
+      <div  class="mission-div" name = "mission4" id="mission4" >Mission 4 Point Value: </div>
+    <select  class="mission-div" name="1mission4Value" id="1mission4Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete4" id="complete4"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check4" name="1check4" value=""/><br>
+  </div>
+      <div  style="display:none;" name="mission5Play1" id="mission5Play1">
+      <div  class="mission-div" name = "mission5" id="mission5" >Mission 5 Point Value: </div>
+    <select  class="mission-div" name="1mission5Value" id="1mission5Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete5" id="complete5"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check5" name="1check5" /><br>
+      </div>
+      <div  style="display:none;" name="mission6Play1" id="mission6Play1">
+      <div  class="mission-div" name = "mission6" id="mission6" >Mission 6 Point Value: </div>
+    <select  class="mission-div" name="1mission6Value" id="1mission6Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete6" id="complete6"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check6" name="1check6"/><br>
+      </div>
+      <div  style="display:none;" name="mission7Play1" id="mission7Play1">
+   <div  class="mission-div" name = "mission7" id="mission7" >Mission 7 Point Value: </div>
+    <select  class="mission-div" name="1mission7Value" id="1mission7Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete7" id="complete7"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check7" name="1check7" /><br>
+      </div>
+      <div  style="display:none;" name="mission8Play1" id="mission8Play1">
+      <div  class="mission-div" name = "mission8" id="mission8" >Mission 8 Point Value: </div>
+    <select  class="mission-div" name="1mission8Value" id="1mission8Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete8" id="complete8"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check8" name="1check8" /><br>
+      </div>
+      <div  style="display:none;" name="mission9Play1" id="mission9Play1">
+      <div  class="mission-div" name = "mission9" id="mission9" >Mission 9 Point Value: </div>
+    <select  class="mission-div" name="1mission9Value" id="1mission9Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete9" id="complete9"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check9" name="1check9" /><br>
+      </div>
+      <div  style="display:none;" name="mission10Play1" id="mission10Play1">
+      <div  class="mission-div" name = "mission10" id="mission10" >Mission 10 Point Value: </div>
+    <select  class="mission-div" name="1mission10Value" id="1mission10Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete10" id="complete10"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check10" name="1check10" /><br>
+      </div>
+      <div  style="display:none;" name="mission11Play1" id="mission11Play1">
+      <div  class="mission-div" name = "mission11" id="mission11" >Mission 11 Point Value: </div>
+    <select  class="mission-div" name="1mission11Value" id="1mission11Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete11" id="complete11"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check11" name="1check11" /><br>
+      </div>
+      <div  style="display:none;" name="mission12Play1" id="mission12Play1">
+      <div  class="mission-div" name = "mission12" id="mission12" >Mission 12 Point Value: </div>
+    <select  class="mission-div" name="1mission12Value" id="1mission12Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete12" id="complete12"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check12" name="1check12" /><br>
+      </div>
+      <div  style="display:none;" name="mission13Play1" id="mission13Play1">
+      <div  class="mission-div" name = "mission13" id="mission13" >Mission 13 Point Value: </div>
+    <select  class="mission-div" name="1mission13Value" id="1mission13Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete13" id="complete13"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check13" name="1check13" /><br>
+      </div>
+      <div  style="display:none;" name="mission14Play1" id="mission14Play1">
+      <div  class="mission-div" name = "mission14" id="mission14" >Mission 14 Point Value: </div>
+    <select  class="mission-div" name="1mission14Value" id="1mission14Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete14" id="complete14"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check14" name="1check14" /><br>
+     </div>
+      <div  style="display:none;" name="mission15Play1" id="mission15Play1">
+    <div  class="mission-div" name = "mission15" id="mission15" >Mission 15 Point Value: </div>
+    <select  class="mission-div" name="1mission15Value" id="1mission15Value" >
+  <option value="0">0</option>
+      <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete15" id="complete15"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="1check15" name="1check15" /><br>
+    </div>
+    </div>
+      <br>Completed the most missions in the game or tied with the person who did (+15)<br><input type="checkbox" id="globeTrotter1" 
+                     name="globeTrotter1"/> <br>
+      Had the longest unbroken train not counting sub train paths (+10)<br><input type="checkbox" id="longestTrain1" 
+                     name="longestTrain1"  
+                     value="10"/> <br><br>
+    
+    <button name="calcOne" id="calcOne" type="submit" onclick="getTotalOne()">Calculate Total</button><br><br>
+    <div class="total" > Total <input type="text" name="total1" id="total1" 
+                            value="0"></div><br><br>
+    </div><br><br><br>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div name="play2" id="play2" class="player-div2" style = "background-color: #7C776D; margin: auto; border: 2px solid; text-align: center;display:none;">
+          
+<table style="width:100%">
+ <tr>
+ <th><p style="; font-size: 20px; font-color: #ffffff;">
+               <b>Player Name: </b><input type="text" name="player2" id="player2" 
+                            ></th>
+ <th></th>
+ </tr>
+  </table>
+            <p style=" font-size: 16px; font-color: #ffffff;">
+              Input the number of times you laid down the specific number of tracks(Example: I laid down 1 train consisting of 5 tracks, meaning in the select box next to 5 I will select 1)</p>EXAMPLE: 5 Track <br><img src="fiveTrack.jpg" alt="title" style="width:300px;height:60px;"><br>    
+    
+ 1  <select name="1track2" id="1track2">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+2 <select name="2track2" id="2track2">
+  <option value="0">0</option>  
+  <option value="2">1</option>
+  <option value="4">2</option>
+  <option value="6">3</option>
+  <option value="8">4</option>
+  <option value="10">5</option>
+  <option value="12">6</option>
+  <option value="14">7</option>
+  <option value="16">8</option>
+  <option value="18">9</option>
+  <option value="20">10</option>
+  <option value="22">11</option>
+  <option value="24">12</option>
+</select>
+3 <select name="3track2" id="3track2">
+  <option value="0">0</option>
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>
+4 <select name="4track2" id="4track2">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+5 <select name="5track2" id="5track2">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+6 <select name="6track2" id="6track2">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+    7 <select name="7track2" id="7track2">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+    8 <select name="8track2" id="8track2">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select><br><br>
+    
+    
+
+                <br>EXAMPLE: Mision card with value<br><img src="missionValue.jpg" alt="title" style="width:200px;height:100px;"/><br>
+                Number of Mission Cards Obtained:  <select name="missions2" id="missions2" onchange="player2Missions()">
+  <option value="0">0</option>
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+</select><br><br>
+      
+    
+    
+    <div style="display:none;" name="secondPart2" id="secondPart2">
+
+    <div  style="display:none;" name="mission1Play2" id="mission1Play2"> 
+    <div  class="mission-div" name = "2mission1" id="2mission1" >Mission 1 Point Value: </div>
+    <select  class="mission-div" name="2mission1Value" id="2mission1Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="2complete1" id="2complete1"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check1" name="2check1" /><br>
+
+    </div> 
+    <div  style="display:none;" name="mission2Play2" id="mission2Play2"> 
+
+    <div  class="mission-div" name = "2mission2" id="2mission2" >Mission 2 Point Value: </div>
+    <select  class="mission-div" name="2mission2Value" id="2mission2Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete2" id="complete2"> Completed </div>
+      <input  class="mission-div3" type="checkbox" id="2check2" name="2check2" value=""/><br>
+      
+    </div> 
+    <div  style="display:none;" name="mission3Play2" id="mission3Play2"> 
+      
+      <div  class="mission-div" name = "2mission3" id="2mission3" >Mission 3 Point Value: </div>
+    <select  class="mission-div" name="2mission3Value" id="2mission3Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete3" id="complete3"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check3" name="2check3" value=""/><br>
+      
+    </div> 
+    <div  style="display:none;" name="mission4Play2" id="mission4Play2"> 
+      
+      <div  class="mission-div" name = "2mission4" id="2mission4" >Mission 4 Point Value: </div>
+    <select  class="mission-div" name="2mission4Value" id="2mission4Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete4" id="complete4"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check4" name="2check4" value=""/><br>
+  
+    </div> 
+    <div  style="display:none;" name="mission5Play2" id="mission5Play2"> 
+
+      <div  class="mission-div" name = "2mission5" id="2mission5" >Mission 5 Point Value: </div>
+    <select  class="mission-div" name="2mission5Value" id="2mission5Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete5" id="complete5"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check5" name="2check5" /><br>
+      
+
+    </div> 
+    <div  style="display:none;" name="mission6Play2" id="mission6Play2"> 
+
+      <div  class="mission-div" name = "mission6" id="mission6" >Mission 6 Point Value: </div>
+    <select  class="mission-div" name="2mission6Value" id="2mission6Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete6" id="complete6"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check6" name="2check6"/><br>
+      
+    </div> 
+    <div  style="display:none;" name="mission7Play2" id="mission7Play2"> 
+
+   <div  class="mission-div" name = "mission7" id="mission7" >Mission 7 Point Value: </div>
+    <select  class="mission-div" name="2mission7Value" id="2mission7Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete7" id="complete7"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check7" name="2check7" /><br>
+      
+    </div> 
+    <div  style="display:none;" name="mission8Play2" id="mission8Play2"> 
+
+      <div  class="mission-div" name = "mission8" id="mission8" >Mission 8 Point Value: </div>
+    <select  class="mission-div" name="2mission8Value" id="2mission8Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete8" id="complete8"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check8" name="2check8" /><br>
+      
+    </div> 
+    <div  style="display:none;" name="mission9Play2" id="mission9Play2"> 
+
+      <div  class="mission-div" name = "mission9" id="mission9" >Mission 9 Point Value: </div>
+    <select  class="mission-div" name="2mission9Value" id="2mission9Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete9" id="complete9"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check9" name="2check9" /><br>
+      
+    </div> 
+    <div  style="display:none;" name="mission10Play2" id="mission10Play2"> 
+
+      <div  class="mission-div" name = "mission10" id="mission10" >Mission 10 Point Value: </div>
+    <select  class="mission-div" name="2mission10Value" id="2mission10Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete10" id="complete10"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check10" name="2check10" /><br>
+      
+    </div> 
+    <div  style="display:none;" name="mission11Play2" id="mission11Play2"> 
+
+      <div  class="mission-div" name = "mission11" id="mission11" >Mission 11 Point Value: </div>
+    <select  class="mission-div" name="2mission11Value" id="2mission11Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete11" id="complete11"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check11" name="2check11" /><br>
+      
+    </div> 
+    <div  style="display:none;" name="mission12Play2" id="mission12Play2"> 
+
+      <div  class="mission-div" name = "mission12" id="mission12" >Mission 12 Point Value: </div>
+    <select  class="mission-div" name="2mission12Value" id="2mission12Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete12" id="complete12"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check12" name="2check12" /><br>
+      
+    </div> 
+    <div  style="display:none;" name="mission13Play2" id="mission13Play2"> 
+
+      <div  class="mission-div" name = "mission13" id="mission13" >Mission 13 Point Value: </div>
+    <select  class="mission-div" name="2mission13Value" id="2mission13Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete13" id="complete13"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check13" name="2check13" /><br>
+      
+    </div> 
+    <div  style="display:none;" name="mission14Play2" id="mission14Play2"> 
+
+      <div  class="mission-div" name = "mission14" id="mission14" >Mission 14 Point Value: </div>
+    <select  class="mission-div" name="2mission14Value" id="2mission14Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete14" id="complete14"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check14" name="2check14" /><br>
+     
+    </div> 
+    <div  style="display:none;" name="mission15Play2" id="mission15Play2"> 
+
+    <div  class="mission-div" name = "mission15" id="mission15" >Mission 15 Point Value: </div>
+    <select  class="mission-div" name="2mission15Value" id="2mission15Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+
+    <div  class="mission-div2" name="complete15" id="complete15"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="2check15" name="2check15" /><br>
+    </div>
+    </div>
+      <br>Completed the most missions in the game or tied with the person who did (+15)<br><input type="checkbox" id="globeTrotter2" 
+                     name="globeTrotter2"/> <br>
+      Had the longest unbroken train not counting sub train paths (+10)<br><input type="checkbox" id="longestTrain2"
+                     name="longestTrain2"  
+                     value="10"/> <br><br>
+    
+    <button name="calcTwo" id="calcTwo" type="submit" onclick="getTotalTwo()">Calculate Total</button><br><br>
+    <div class="total" > Total <input type="text" name="total2" id="total2" 
+                            value="0"/></div><br><br>
+   </div><br><br><br>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div name="play3" id="play3" class="player-div3" style = "background-color: #7C776D; margin: auto; border: 2px solid; text-align: center;display:none;">
+          
+<table style="width:100%">
+ <tr>
+ <th><p style=" font-size: 20px; font-color: #ffffff;">
+               <b>Player Name: </b><input type="text" name="player1" id="player1" 
+                            ></th>
+ <th></th>
+ </tr>
+    </table>
+            <p style="font-size: 16px; font-color: #ffffff;">
+              Input the number of times you laid down the specific number of tracks(Example: I laid down 1 train consisting of 5 tracks, meaning in the select box next to 5 I will select 1)</p>EXAMPLE: 5 Track <br><img src="fiveTrack.jpg" alt="title" style="width:300px;height:60px;"><br>
+    
+ 1  <select name="1track3" id="1track3">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+2 <select name="2track3" id="2track3">
+  <option value="0">0</option>  
+  <option value="2">1</option>
+  <option value="4">2</option>
+  <option value="6">3</option>
+  <option value="8">4</option>
+  <option value="10">5</option>
+  <option value="12">6</option>
+  <option value="14">7</option>
+  <option value="16">8</option>
+  <option value="18">9</option>
+  <option value="20">10</option>
+  <option value="22">11</option>
+  <option value="24">12</option>
+</select>
+3 <select name="3track3" id="3track3">
+  <option value="0">0</option>
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>
+4 <select name="4track3" id="4track3">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+5 <select name="5track3" id="5track3">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+6 <select name="6track3" id="6track3">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+    7 <select name="7track3" id="7track3">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+    8 <select name="8track3" id="8track3">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select><br><br>
+    
+  
+                <br>EXAMPLE:Mission card with value<br><img src="missionValue.jpg" alt="title" style="width:200px;height:100px;"><br> 
+                Number of Mission Cards Obtained:  <select name="missions3" id="missions3" onchange="player3Missions()">
+  <option value="0">0</option>
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+</select> <br><br>
+      
+    
+    <div style="display:none;" name="secondPart3" id="secondPart3">
+
+      
+    <div  style="display:none;" name="mission1Play3" id="mission1Play3"> 
+
+    <div  class="mission-div" name = "mission1" id="mission1" >Mission 1 Point Value: </div>
+    <select  class="mission-div" name="3mission1Value" id="3mission1Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete1" id="complete1"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check1" name="3check1" /><br>
+    
+    </div>  
+    <div  style="display:none;" name="mission2Play3" id="mission2Play3"> 
+
+    <div  class="mission-div" name = "mission2" id="mission2" >Mission 2 Point Value: </div>
+    <select  class="mission-div" name="3mission2Value" id="3mission2Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete2" id="complete2"> Completed </div>
+      <input  class="mission-div3" type="checkbox" id="3check2" name="3check2" value=""/><br>
+      
+    </div>  
+    <div  style="display:none;" name="mission3Play3" id="mission3Play3"> 
+
+      <div  class="mission-div" name = "mission3" id="mission3" >Mission 3 Point Value: </div>
+    <select  class="mission-div" name="3mission3Value" id="3mission3Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete3" id="complete3"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check3" name="3check3" value=""/><br>
+      
+    </div>  
+    <div  style="display:none;" name="mission4Play3" id="mission4Play3"> 
+
+      <div  class="mission-div" name = "mission4" id="mission4" >Mission 4 Point Value: </div>
+    <select  class="mission-div" name="3mission4Value" id="3mission4Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete4" id="complete4"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check4" name="3check4" value=""/><br>
+  
+    </div>  
+    <div  style="display:none;" name="mission5Play3" id="mission5Play3"> 
+
+      <div  class="mission-div" name = "mission5" id="mission5" >Mission 5 Point Value: </div>
+    <select  class="mission-div" name="3mission5Value" id="3mission5Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete5" id="complete5"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check5" name="3check5" /><br>
+      
+    </div>  
+    <div  style="display:none;" name="mission6Play3" id="mission6Play3"> 
+
+      <div  class="mission-div" name = "mission6" id="mission6" >Mission 6 Point Value: </div>
+    <select  class="mission-div" name="3mission6Value" id="3mission6Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete6" id="complete6"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check6" name="3check6"/><br>
+      
+    </div>  
+    <div  style="display:none;" name="mission7Play3" id="mission7Play3"> 
+
+   <div  class="mission-div" name = "mission7" id="mission7" >Mission 7 Point Value: </div>
+    <select  class="mission-div" name="3mission7Value" id="3mission7Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete7" id="complete7"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check7" name="3check7" /><br>
+      
+    </div>  
+    <div  style="display:none;" name="mission8Play3" id="mission8Play3"> 
+
+      <div  class="mission-div" name = "mission8" id="mission8" >Mission 8 Point Value: </div>
+    <select  class="mission-div" name="3mission8Value" id="3mission8Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete8" id="complete8"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check8" name="3check8" /><br>
+      
+    </div>  
+    <div  style="display:none;" name="mission9Play3" id="mission9Play3"> 
+
+      <div  class="mission-div" name = "mission9" id="mission9" >Mission 9 Point Value: </div>
+    <select  class="mission-div" name="3mission9Value" id="3mission9Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete9" id="complete9"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check9" name="3check9" /><br>
+      
+    </div>  
+    <div  style="display:none;" name="mission10Play3" id="mission10Play3"> 
+
+      <div  class="mission-div" name = "mission10" id="mission10" >Mission 10 Point Value: </div>
+    <select  class="mission-div" name="3mission10Value" id="3mission10Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete10" id="complete10"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check10" name="3check10" /><br>
+      
+    </div>  
+    <div  style="display:none;" name="mission11Play3" id="mission11Play3"> 
+
+      <div  class="mission-div" name = "mission11" id="mission11" >Mission 11 Point Value: </div>
+    <select  class="mission-div" name="3mission11Value" id="3mission11Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete11" id="complete11"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check11" name="3check11" /><br>
+      
+    </div>  
+    <div  style="display:none;" name="mission12Play3" id="mission12Play3"> 
+
+      <div  class="mission-div" name = "mission12" id="mission12" >Mission 12 Point Value: </div>
+    <select  class="mission-div" name="3mission12Value" id="3mission12Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete12" id="complete12"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check12" name="3check12" /><br>
+      
+    </div>  
+    <div  style="display:none;" name="mission13Play3" id="mission13Play3"> 
+
+      <div  class="mission-div" name = "mission13" id="mission13" >Mission 13 Point Value: </div>
+    <select  class="mission-div" name="3mission13Value" id="3mission13Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete13" id="complete13"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check13" name="3check13" /><br>
+      
+    </div>  
+    <div  style="display:none;" name="mission14Play3" id="mission14Play3"> 
+
+      <div  class="mission-div" name = "mission14" id="mission14" >Mission 14 Point Value: </div>
+    <select  class="mission-div" name="3mission14Value" id="3mission14Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete14" id="complete14"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check14" name="3check14" /><br>
+     
+    </div>  
+    <div  style="display:none;" name="mission15Play3" id="mission15Play3"> 
+
+    <div  class="mission-div" name = "mission15" id="mission15" >Mission 15 Point Value: </div>
+    <select  class="mission-div" name="3mission15Value" id="3mission15Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete15" id="complete15"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="3check15" name="3check15" /><br>
+    </div>
+    </div>
+      <br>Completed the most missions in the game or tied with the person who did (+15)<br><input type="checkbox" id="globeTrotter3" 
+                     name="globeTrotter3"/> <br>
+      Had the longest unbroken train not counting sub train paths (+10)<br><input type="checkbox" id="longestTrain3"
+                     name="longestTrain3"  
+                     value="10"/> <br><br>
+    
+    <button name="calcThree" id="calcThree" type="submit" onclick="getTotalThree()">Calculate Total</button><br><br>
+    <div class="total" > Total <input type="text" name="total3" id="total3" 
+                            value="0"/></div><br><br>
+   </div><br><br><br>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div name="play4" id="play4" class="player-div4" style = "background-color: #7C776D; margin: auto; border: 2px solid; text-align: center;display:none;">
+          
+ <table style="width:100%">
+ <tr>
+ <th><p style=" font-size: 20px; font-color: #ffffff;">
+               <b>Player Name: </b><input type="text" name="player1" id="player1" 
+                            ></th>
+ <th></th>
+ </tr>
+    </table>
+            <p style=" font-size: 16px; font-color: #ffffff;">
+              Input the number of times you laid down the specific number of tracks(Example: I laid down 1 train consisting of 5 tracks, meaning in the select box next to 5 I will select 1)</p>EXAMPLE: 5 Track <br><img src="fiveTrack.jpg" alt="title" style="width:300px;height:60px;"><br>
+    
+ 1  <select name="1track4" id="1track4">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+2 <select name="2track4" id="2track4">
+  <option value="0">0</option>  
+  <option value="2">1</option>
+  <option value="4">2</option>
+  <option value="6">3</option>
+  <option value="8">4</option>
+  <option value="10">5</option>
+  <option value="12">6</option>
+  <option value="14">7</option>
+  <option value="16">8</option>
+  <option value="18">9</option>
+  <option value="20">10</option>
+  <option value="22">11</option>
+  <option value="24">12</option>
+</select>
+3 <select name="3track4" id="3track4">
+  <option value="0">0</option>
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>
+4 <select name="4track4" id="4track4">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+5 <select name="5track4" id="5track4">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+6 <select name="6track4" id="6track4">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+    7 <select name="7track4" id="7track4">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+    8 <select name="8track4" id="8track4">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select><br><br>
+    
+  
+                <br>EXAMPLE: Mission card with value<br><img src="missionValue.jpg" alt="title" style="width:200px;height:100px;"><br> 
+                Number of Mission Cards Obtained:  <select name="missions4" id="missions4" onchange="player4Missions()">
+  <option value="0">0</option>
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+</select> <br><br>
+      
+    
+    <div style="display:none;" name="secondPart4" id="secondPart4">
+
+    <div  style="display:none;" name="mission1Play4" id="mission1Play4"> 
+
+      
+    <div  class="mission-div" name = "mission1" id="mission1" >Mission 1 Point Value: </div>
+    <select  class="mission-div" name="4mission1Value" id="4mission1Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete1" id="complete1"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check1" name="4check1" /><br>
+
+    </div>
+    <div  style="display:none;" name="mission2Play4" id="mission2Play4"> 
+
+    <div  class="mission-div" name = "mission2" id="mission2" >Mission 2 Point Value: </div>
+    <select  class="mission-div" name="4mission2Value" id="4mission2Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete2" id="complete2"> Completed </div>
+      <input  class="mission-div3" type="checkbox" id="4check2" name="4check2" value=""/><br>
+      
+    </div>
+    <div  style="display:none;" name="mission3Play4" id="mission3Play4"> 
+      
+      <div  class="mission-div" name = "mission3" id="mission3" >Mission 3 Point Value: </div>
+    <select  class="mission-div" name="4mission3Value" id="4mission3Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete3" id="complete3"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check3" name="4check3" value=""/><br>
+      
+    </div>
+    <div  style="display:none;" name="mission4Play4" id="mission4Play4"> 
+      
+      <div  class="mission-div" name = "mission4" id="mission4" >Mission 4 Point Value: </div>
+    <select  class="mission-div" name="4mission4Value" id="4mission4Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete4" id="complete4"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check4" name="4check4" value=""/><br>
+  
+    </div>
+    <div  style="display:none;" name="mission5Play4" id="mission5Play4"> 
+      
+      <div  class="mission-div" name = "mission5" id="mission5" >Mission 5 Point Value: </div>
+    <select  class="mission-div" name="4mission5Value" id="4mission5Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete5" id="complete5"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check5" name="4check5" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission6Play4" id="mission6Play4"> 
+      
+      <div  class="mission-div" name = "mission6" id="mission6" >Mission 6 Point Value: </div>
+    <select  class="mission-div" name="4mission6Value" id="4mission6Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete6" id="complete6"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check6" name="4check6"/><br>
+      
+    </div>
+    <div  style="display:none;" name="mission7Play4" id="mission7Play4"> 
+      
+   <div  class="mission-div" name = "mission7" id="mission7" >Mission 7 Point Value: </div>
+    <select  class="mission-div" name="4mission7Value" id="4mission7Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete7" id="complete7"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check7" name="4check7" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission8Play4" id="mission8Play4"> 
+      
+      <div  class="mission-div" name = "mission8" id="mission8" >Mission 8 Point Value: </div>
+    <select  class="mission-div" name="4mission8Value" id="4mission8Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete8" id="complete8"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check8" name="4check8" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission9Play4" id="mission9Play4"> 
+      
+      <div  class="mission-div" name = "mission9" id="mission9" >Mission 9 Point Value: </div>
+    <select  class="mission-div" name="4mission9Value" id="4mission9Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete9" id="complete9"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check9" name="4check9" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission10Play4" id="mission10Play4"> 
+      
+      <div  class="mission-div" name = "mission10" id="mission10" >Mission 10 Point Value: </div>
+    <select  class="mission-div" name="4mission10Value" id="4mission10Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete10" id="complete10"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check10" name="4check10" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission11Play4" id="mission11Play4"> 
+      
+      <div  class="mission-div" name = "mission11" id="mission11" >Mission 11 Point Value: </div>
+    <select  class="mission-div" name="4mission11Value" id="4mission11Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete11" id="complete11"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check11" name="4check11" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission12Play4" id="mission12Play4"> 
+      
+      <div  class="mission-div" name = "mission12" id="mission12" >Mission 12 Point Value: </div>
+    <select  class="mission-div" name="4mission12Value" id="4mission12Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete12" id="complete12"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check12" name="4check12" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission13Play4" id="mission13Play4"> 
+      
+      <div  class="mission-div" name = "mission13" id="mission13" >Mission 13 Point Value: </div>
+    <select  class="mission-div" name="4mission13Value" id="4mission13Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete13" id="complete13"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check13" name="4check13" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission14Play4" id="mission14Play4"> 
+      
+      <div  class="mission-div" name = "mission14" id="mission14" >Mission 14 Point Value: </div>
+    <select  class="mission-div" name="4mission14Value" id="4mission14Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete14" id="complete14"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check14" name="4check14" /><br>
+     
+    </div>
+    <div  style="display:none;" name="mission15Play4" id="mission15Play4"> 
+      
+    <div  class="mission-div" name = "mission15" id="mission15" >Mission 15 Point Value: </div>
+    <select  class="mission-div" name="4mission15Value" id="4mission15Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete15" id="complete15"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="4check15" name="4check15" /><br>
+    </div>
+    </div>
+      <br>Completed the most missions in the game or tied with the person who did (+15)<br><input type="checkbox" id="globeTrotter4" 
+                     name="globeTrotter4"  
+                     value="15"/> <br>
+      Had the longest unbroken train not counting sub train paths (+10)<br><input type="checkbox" id="longestTrain4"
+                     name="longestTrain4"  
+                     value="10"/> <br><br>
+    <button name="calcFour" id="calcFour" type="submit" onclick="getTotalFour()">Calculate Total</button><br><br>
+    <div class="total"> Total <input type="text" name="total4" id="total4" 
+                            value="0"/></div><br><br>
+   </div><br><br><br>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div name="play5" id="play5" class="player-div5" style = "background-color: #7C776D; margin: auto; border: 2px solid; text-align: center;display:none;">
+          
+ <table style="width:100%">
+ <tr>
+ <th><p style=" font-size: 20px; font-color: #ffffff;">
+               <b>Player Name: </b><input type="text" name="player1" id="player1" 
+                            ></th>
+ <th></th>
+ </tr>
+    </table>
+            <p style=" font-size: 16px; font-color: #ffffff;">
+              Input the number of times you laid down the specific number of tracks(Example: I laid down 1 train consisting of 5 tracks, meaning in the select box next to 5 I will select 1)</p>EXAMPLE: 5 Track <br><img src="fiveTrack.jpg" alt="title" style="width:300px;height:60px;"><br>
+   
+ 1  <select name="1track5" id="1track5">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+</select>
+2 <select name="2track5" id="2track5">
+  <option value="0">0</option>  
+  <option value="2">1</option>
+  <option value="4">2</option>
+  <option value="6">3</option>
+  <option value="8">4</option>
+  <option value="10">5</option>
+  <option value="12">6</option>
+  <option value="14">7</option>
+  <option value="16">8</option>
+  <option value="18">9</option>
+  <option value="20">10</option>
+  <option value="22">11</option>
+  <option value="24">12</option>
+</select>
+3 <select name="3track5" id="3track5">
+  <option value="0">0</option>
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+</select>
+4 <select name="4track5" id="4track5">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+5 <select name="5track5" id="5track5">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+6 <select name="6track5" id="6track5">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+    7 <select name="7track5" id="7track5">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select>
+    8 <select name="8track5" id="8track5">
+    <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+</select><br><br>
+    
+   
+                <br>EXAMPLE: Mission card with value<br><img src="missionValue.jpg" alt="title" style="width:200px;height:100px;"><br>
+                Number of Mission Cards Obtained:  <select name="missions5" id="missions5" onchange="player5Missions()">
+  <option value="0">0</option>
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+</select> <br><br>
+      
+    
+    <div style="display:none;" name="secondPart5" id="secondPart5">
+
+    <div  style="display:none;" name="mission1Play5" id="mission1Play5"> 
+      
+      
+    <div  class="mission-div" name = "mission1" id="mission1" >Mission 1 Point Value: </div>
+    <select  class="mission-div" name="5mission1Value" id="5mission1Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete1" id="complete1"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check1" name="5check1" /><br>
+    
+    </div>
+    <div  style="display:none;" name="mission2Play5" id="mission2Play5"> 
+      
+    <div  class="mission-div" name = "mission2" id="mission2" >Mission 2 Point Value: </div>
+    <select  class="mission-div" name="5mission2Value" id="5mission2Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete2" id="complete2"> Completed </div>
+      <input  class="mission-div3" type="checkbox" id="5check2" name="5check2" value=""/><br>
+      
+    </div>
+    <div  style="display:none;" name="mission3Play5" id="mission3Play5"> 
+      
+      <div  class="mission-div" name = "mission3" id="mission3" >Mission 3 Point Value: </div>
+    <select  class="mission-div" name="5mission3Value" id="5mission3Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete3" id="complete3"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check3" name="5check3" value=""/><br>
+      
+      <div  class="mission-div" name = "mission4" id="mission4" >Mission 4 Point Value: </div>
+    <select  class="mission-div" name="5mission4Value" id="5mission4Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete4" id="complete4"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check4" name="5check4" value=""/><br>
+  
+    </div>
+    <div  style="display:none;" name="mission5Play5" id="mission5Play5"> 
+      
+      <div  class="mission-div" name = "mission5" id="mission5" >Mission 5 Point Value: </div>
+    <select  class="mission-div" name="5mission5Value" id="5mission5Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete5" id="complete5"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check5" name="5check5" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission6Play5" id="mission6Play5"> 
+      
+      <div  class="mission-div" name = "mission6" id="mission6" >Mission 6 Point Value: </div>
+    <select  class="mission-div" name="5mission6Value" id="5mission6Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete6" id="complete6"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check6" name="5check6"/><br>
+      
+    </div>
+    <div  style="display:none;" name="mission7Play5" id="mission7Play5"> 
+      
+   <div  class="mission-div" name = "mission7" id="mission7" >Mission 7 Point Value: </div>
+    <select  class="mission-div" name="5mission7Value" id="5mission7Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete7" id="complete7"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check7" name="5check7" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission8Play5" id="mission8Play5"> 
+      
+      <div  class="mission-div" name = "mission8" id="mission8" >Mission 8 Point Value: </div>
+    <select  class="mission-div" name="5mission8Value" id="5mission8Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete8" id="complete8"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check8" name="5check8" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission9Play5" id="mission9Play5"> 
+      
+      <div  class="mission-div" name = "mission9" id="mission9" >Mission 9 Point Value: </div>
+    <select  class="mission-div" name="5mission9Value" id="5mission9Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete9" id="complete9"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check9" name="5check9" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission10Play5" id="mission10Play5"> 
+      
+      <div  class="mission-div" name = "mission10" id="mission10" >Mission 10 Point Value: </div>
+    <select  class="mission-div" name="5mission10Value" id="5mission10Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete10" id="complete10"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check10" name="5check10" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission11Play5" id="mission11Play5"> 
+      
+      <div  class="mission-div" name = "mission11" id="mission11" >Mission 11 Point Value: </div>
+    <select  class="mission-div" name="5mission11Value" id="5mission11Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete11" id="complete11"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check11" name="5check11" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission12Play5" id="mission12Play5"> 
+      
+      <div  class="mission-div" name = "mission12" id="mission12" >Mission 12 Point Value: </div>
+    <select  class="mission-div" name="5mission12Value" id="5mission12Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete12" id="complete12"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check12" name="5check12" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission13Play5" id="mission13Play5"> 
+      
+      <div  class="mission-div" name = "mission13" id="mission13" >Mission 13 Point Value: </div>
+    <select  class="mission-div" name="5mission13Value" id="5mission13Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete13" id="complete13"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check13" name="5check13" /><br>
+      
+    </div>
+    <div  style="display:none;" name="mission14Play5" id="mission14Play5"> 
+      
+      <div  class="mission-div" name = "mission14" id="mission14" >Mission 14 Point Value: </div>
+    <select  class="mission-div" name="5mission14Value" id="5mission14Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete14" id="complete14"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check14" name="5check14" /><br>
+     
+    </div>
+    <div  style="display:none;" name="mission15Play5" id="mission15Play5"> 
+      
+    <div  class="mission-div" name = "mission15" id="mission15" >Mission 15 Point Value: </div>
+    <select  class="mission-div" name="5mission15Value" id="5mission15Value" >
+      <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>  
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>  
+  <option value="25">25</option>
+</select> 
+    <div  class="mission-div2" name="complete15" id="complete15"> Completed </div>
+    <input  class="mission-div3" type="checkbox" id="5check15" name="5check15" /><br>
+    </div>
+  </div>
+      <br>Completed the most missions in the game or tied with the person who did (+15) <br><input type="checkbox" id="globeTrotter5" 
+                     name="globeTrotter5"  
+                     value="15"/> <br>
+      Had the longest unbroken train not counting sub train paths (+10)<br><input type="checkbox" id="longestTrain5"
+                     name="longestTrain5"  
+                     value="10"/> <br><br>
+    <button name="calcFive" id="calcFive" type="submit" onclick="getTotalFive()">Calculate Total</button><br><br>
+    <div class="total"> Total <input type="text" name="total5" id="total5" 
+                            value="0"/></div><br><br>
+    </div><br><br>
+   </div>
+</body>
+</html>
+ 
